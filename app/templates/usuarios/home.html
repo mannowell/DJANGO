@@ -1,0 +1,15 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+
+<form action="{% url 'ls_user' %}" method="post">
+      {% csrf_token %}
+      <div style="text-align: center;" class="container"><br>
+       <br> <h1>Cadastro</h1><br>
+        Animal <input name="animal" class="form-control-sm" type="text">
+        Especie <input name="especie" class="form-control-sm" type="text">
+        <button class="form-control-sm">Enviar</button>
+      </div>
+</form>
+{% endblock %}
+
+    
